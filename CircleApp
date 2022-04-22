@@ -1,0 +1,110 @@
+
+	public class Circle { 
+	    private float radius;
+	    private int x;
+	    private int y;
+
+	//constructor
+
+	    public Circle(float radius,int x,int y){
+	        this.radius=radius;
+	        this.x=    x;
+	        this.y=    y;
+	    }
+	    //set x
+	    public void setX(int x) {
+	        this.x = x;
+	    }
+	    //get x
+	    public int getX() {
+	        return x;
+	    }
+	    //set y
+	    public void setY(int y) {
+	        this.y = y;
+	    }
+	    //get y
+	    public int getY() {
+	        return y;
+	    }
+	//set Radius
+
+	    public void setRadius(float radius) {
+	        this.radius = radius;
+	    }
+
+
+	//get radius
+
+	    public float getRadius() {
+	        while(radius>0){
+	            return radius;
+
+	        }
+	        return 0;
+	    }
+
+	//return Area
+
+	    public float calculateArea() {
+	        return (float) (Math.PI*Math.pow(radius, 2.0));
+	    }
+	    //return Circumference
+
+	    public float calculateCircumference() {
+	        return (float) (2*Math.PI*radius);
+	    }
+	    //return Diameter
+
+	    public float calculateDiameter(){
+	        return 2*radius;
+	    }
+
+
+	}
+
+  public class CircleApp {
+
+    public static void main(String[] args){
+    	
+        Circle circle1= new Circle((float) 10.14,1,3);
+        System.out.println("Radius : "+circle1.getRadius());
+        
+        System.out.println("coordinates of circle 1 are : ");
+        System.out.println("x is : " +circle1.getX());
+        System.out.println("y is : "+circle1.getY());
+        
+        System.out.println();
+        System.out.println("Area of a circle 1 is: "+circle1.calculateArea());
+        System.out.println("Circumference of circle 1 is : "+circle1.calculateCircumference());
+        System.out.println("Diameter of circle 1 is : "+circle1.calculateDiameter());
+
+        System.out.println();
+        Circle circle2= new Circle((float) 11.17,2,4);
+        System.out.println("Radius : "+ circle2.getRadius()); 
+        
+        System.out.println("coordinates of circle 2 are: ");
+        System.out.println("x is : "+ circle2.getX());
+        System.out.println("y is : "+circle2.getY());
+        
+        System.out.println();
+        System.out.println("Area of a circle 2 is : "+circle2.calculateArea());
+        System.out.println("Circumference of circle 2 is : "+circle2.calculateCircumference());
+        System.out.println("Diameter of circle 2 is : "+circle2.calculateDiameter());
+
+        System.out.println();
+        Circle circle3= new Circle((float) 13.17,4,9);
+        
+        System.out.println("Radius : "+circle3.getRadius());
+        System.out.println("coordinates of circle 3 are: ");
+        System.out.println("x is : "+ circle3.getX());
+        System.out.println("y is : "+circle3.getY());
+        
+        System.out.println();
+        System.out.println("Area of a circle 3 is: "+circle3.calculateArea());
+        System.out.println("Circumference of circle 3 is : "+circle3.calculateCircumference());
+        System.out.println("Diameter of circle 3 is : "+circle3.calculateDiameter());
+        
+    }
+
+}
